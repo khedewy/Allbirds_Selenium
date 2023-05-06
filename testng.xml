@@ -1,0 +1,65 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForFirstProduct"/>
+                    <include name="navigateToProducts"/>
+                    <include name="addToCart"/>
+                </methods>
+            </class>
+            <class name="tests.KidsProductsTest">
+                <methods>
+                    <include name="navigateToAccessoriesPageTest"/>
+                    <include name="navigateToSlipsOnsProductTest"/>
+                </methods>
+            </class>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="navigateToRegisterPage"/>
+                    <include name="completeRegister"/>
+                    <include name="assertRegisterSuccessfully"/>
+                    <include name="logoutAndNavigateToLogin"/>
+                    <include name="enterLoginInformation"/>
+                </methods>
+            </class>
+            <class name="tests.MenProductsTest">
+                <methods>
+                    <include name="navigateToTreeRunner"/>
+                    <include name="navigateToHatsProducts"/>
+                </methods>
+            </class>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="navigateToRegisterPage"/>
+                    <include name="completeRegister"/>
+                    <include name="assertRegisterSuccessfully"/>
+                </methods>
+            </class>
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForFirstProduct"/>
+                    <include name="searchForSecondProduct"/>
+                </methods>
+            </class>
+            <class name="tests.SubscribeTest">
+                <methods>
+                    <include name="userCanSubscribe"/>
+                </methods>
+            </class>
+            <class name="tests.UpdateCartTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForFirstProduct"/>
+                    <include name="navigateToProducts"/>
+                    <include name="addToCart"/>
+                    <include name="updateCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
